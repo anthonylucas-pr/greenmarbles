@@ -1,1053 +1,817 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Green Marbles PR Solutions | Strategic Author Growth</title>
-    <meta name="description" content="Strategic BookTok promotion and author growth solutions for serious writers. Elevate your narrative, expand your reach.">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Green Marbles PR & Publishing | Where Stories Find Their Readers</title>
+  <meta name="description" content="Expert BookTok promotion and comprehensive book publishing services.">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: '#0d4a3a',
+            'brand-light': '#1a6b54',
+            'brand-dark': '#083028',
+            gold: '#c9a962',
+            'gold-light': '#dfc585',
+          },
+          fontFamily: {
+            display: ['Playfair Display', 'serif'],
+            sans: ['Inter', 'sans-serif'],
+          },
+        },
+      },
+    }
+  </script>
+  <style>
+    html { scroll-behavior: smooth; }
     
-    <!-- Google Fonts: Playfair Display (Serif/Premium) and Lato (Sans/Clean) -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
-
-    <style>
-        /* --- CSS VARIABLES & RESET --- */
-        :root {
-            --primary-green: #052b22;
-            --secondary-green: #0a3d32;
-            --accent-gold: #c5a059;
-            --accent-gold-hover: #b08d4b;
-            --soft-white: #fdfcf8;
-            --pure-white: #ffffff;
-            --charcoal: #1a1a1a;
-            --text-grey: #4a4a4a;
-            --border-radius: 2px;
-            --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-            --shadow: 0 10px 30px rgba(0,0,0,0.08);
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        body {
-            font-family: 'Lato', sans-serif;
-            background-color: var(--soft-white);
-            color: var(--charcoal);
-            line-height: 1.7;
-            overflow-x: hidden;
-            -webkit-font-smoothing: antialiased;
-        }
-
-        h1, h2, h3, h4 {
-            font-family: 'Playfair Display', serif;
-            color: var(--primary-green);
-            font-weight: 700;
-            line-height: 1.2;
-        }
-
-        p {
-            margin-bottom: 1rem;
-        }
-
-        a {
-            text-decoration: none;
-            color: inherit;
-            transition: var(--transition);
-        }
-
-        img {
-            max-width: 100%;
-            display: block;
-        }
-
-        /* --- UTILITIES --- */
-        .container {
-            max-width: 1100px;
-            margin: 0 auto;
-            padding: 0 24px;
-        }
-
-        .text-center { text-align: center; }
-        .flex-center { display: flex; justify-content: center; align-items: center; }
-        
-        .section-padding { padding: 100px 0; }
-        
-        .gold-text { color: var(--accent-gold); }
-        .white-text { color: var(--soft-white); }
-
-        /* --- BUTTONS --- */
-        .btn {
-            display: inline-block;
-            padding: 16px 36px;
-            background-color: var(--accent-gold);
-            color: var(--pure-white);
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            font-size: 0.85rem;
-            border: 1px solid var(--accent-gold);
-            cursor: pointer;
-            transition: var(--transition);
-            box-shadow: 0 4px 15px rgba(197, 160, 89, 0.3);
-            border-radius: var(--border-radius);
-            /* Ensure clickable */
-            position: relative; 
-            z-index: 10;
-        }
-
-        .btn:hover {
-            background-color: var(--accent-gold-hover);
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(197, 160, 89, 0.4);
-        }
-
-        .btn:active {
-            transform: translateY(0);
-        }
-
-        .btn-outline {
-            background-color: transparent;
-            border: 1px solid var(--pure-white);
-            color: var(--pure-white);
-            box-shadow: none;
-        }
-
-        .btn-outline:hover {
-            background-color: var(--pure-white);
-            color: var(--primary-green);
-        }
-
-        .btn-full {
-            width: 100%;
-            text-align: center;
-        }
-
-        /* --- NAVIGATION --- */
-        nav {
-            padding: 24px 0;
-            position: absolute;
-            top: 0;
-            width: 100%;
-            z-index: 100;
-            background: linear-gradient(to bottom, rgba(5,43,34,0.95), rgba(5,43,34,0));
-        }
-
-        .nav-inner {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.4rem;
-            color: var(--soft-white);
-            font-weight: 700;
-            letter-spacing: 0.5px;
-            z-index: 101;
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 30px;
-        }
-
-        .nav-links a {
-            color: rgba(255,255,255,0.85);
-            font-size: 0.8rem;
-            text-transform: uppercase;
-            letter-spacing: 1.5px;
-            font-weight: 400;
-            position: relative;
-            z-index: 101;
-            cursor: pointer;
-        }
-
-        .nav-links a::after {
-            content: '';
-            position: absolute;
-            width: 0;
-            height: 1px;
-            bottom: -5px;
-            left: 0;
-            background-color: var(--accent-gold);
-            transition: width 0.3s;
-        }
-
-        .nav-links a:hover::after {
-            width: 100%;
-        }
-
-        .nav-links a:hover {
-            color: var(--pure-white);
-        }
-
-        /* --- HERO SECTION --- */
-        .hero {
-            position: relative;
-            height: 95vh;
-            min-height: 700px;
-            background-image: url('https://picsum.photos/seed/darkluxurylibrary/1920/1080');
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
-            display: flex;
-            align-items: center;
-            color: var(--soft-white);
-            overflow: hidden;
-        }
-
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0; left: 0; right: 0; bottom: 0;
-            background: linear-gradient(135deg, rgba(5,43,34,0.9) 0%, rgba(5,43,34,0.6) 50%, rgba(5,43,34,0.3) 100%);
-            z-index: 1;
-        }
-
-        .hero-content {
-            position: relative;
-            z-index: 2; /* Ensure content is above overlay */
-            max-width: 800px;
-            opacity: 0;
-            transform: translateY(40px);
-            animation: heroFadeIn 1s ease-out forwards 0.5s;
-        }
-
-        .book-reveal {
-            width: 80px;
-            height: 3px;
-            background-color: var(--accent-gold);
-            margin-bottom: 30px;
-            position: relative;
-            transform: scaleX(0);
-            animation: lineExpand 0.8s ease-out forwards 1s;
-        }
-        
-        .book-reveal::after {
-            content: '';
-            position: absolute;
-            right: -10px;
-            top: -6px;
-            width: 0; height: 0; 
-            border-top: 6px solid transparent;
-            border-bottom: 6px solid transparent;
-            border-left: 10px solid var(--accent-gold);
-            opacity: 0;
-            animation: arrowFade 0.5s ease-out forwards 2s;
-        }
-
-        .hero h1 {
-            color: var(--soft-white);
-            font-size: 3.8rem;
-            margin-bottom: 25px;
-            text-shadow: 0 4px 20px rgba(0,0,0,0.4);
-        }
-
-        .hero .subheadline {
-            font-size: 1.25rem;
-            font-weight: 300;
-            margin-bottom: 45px;
-            opacity: 0.95;
-            border-left: 3px solid var(--accent-gold);
-            padding-left: 24px;
-            max-width: 600px;
-        }
-
-        /* --- INTRO (2 LINES) --- */
-        .intro-section {
-            background-color: var(--pure-white);
-            padding: 40px 0;
-            border-bottom: 1px solid #f0f0f0;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.02);
-            position: relative;
-            z-index: 10;
-        }
-
-        .intro-text {
-            font-size: 1.3rem;
-            color: var(--primary-green);
-            font-weight: 500;
-            text-align: center;
-            max-width: 900px;
-            margin: 0 auto;
-            letter-spacing: 0.5px;
-        }
-
-        /* --- PERSONALIZED DISCOVERY --- */
-        .discovery {
-            background-color: var(--soft-white);
-        }
-
-        .discovery-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 80px;
-            align-items: center;
-        }
-
-        .discovery-text h2 {
-            font-size: 2.8rem;
-            margin-bottom: 30px;
-        }
-
-        .discovery-text p {
-            margin-bottom: 25px;
-            color: var(--text-grey);
-            font-size: 1.1rem;
-        }
-
-        .highlight-box {
-            background: var(--pure-white);
-            padding: 35px;
-            border-left: 4px solid var(--accent-gold);
-            box-shadow: var(--shadow);
-            margin-top: 30px;
-        }
-
-        .highlight-box p {
-            margin: 0;
-            font-style: italic;
-            color: var(--primary-green);
-            font-size: 1.15rem;
-            font-family: 'Playfair Display', serif;
-        }
-
-        .discovery-image {
-            position: relative;
-        }
-
-        .discovery-image img {
-            border-radius: var(--border-radius);
-            box-shadow: 25px 25px 0px var(--secondary-green);
-            transition: var(--transition);
-        }
-
-        .discovery-image:hover img {
-            transform: translate(-5px, -5px);
-            box-shadow: 30px 30px 0px var(--primary-green);
-        }
-
-        /* --- STRATEGY (BOOKTOK) --- */
-        .strategy {
-            background-color: var(--primary-green);
-            color: var(--soft-white);
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .strategy::after {
-            content: "";
-            position: absolute;
-            top: 0; left: 0; width: 100%; height: 100%;
-            background-image: radial-gradient(var(--accent-gold) 1px, transparent 1px);
-            background-size: 40px 40px;
-            opacity: 0.05;
-            pointer-events: none;
-        }
-
-        .strategy-content {
-            position: relative;
-            z-index: 2;
-            max-width: 900px;
-            margin: 0 auto;
-        }
-
-        .strategy h2 {
-            color: var(--accent-gold);
-            margin-bottom: 20px;
-            text-align: center;
-            font-size: 2.5rem;
-        }
-
-        .strategy-sub {
-            text-align: center;
-            margin-bottom: 60px;
-            color: rgba(255,255,255,0.7);
-            font-size: 1.1rem;
-        }
-
-        .strategy-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-            gap: 30px;
-        }
-
-        .strategy-card {
-            background: rgba(255,255,255,0.03);
-            padding: 40px 30px;
-            border: 1px solid rgba(197, 160, 89, 0.15);
-            transition: var(--transition);
-            backdrop-filter: blur(5px);
-        }
-
-        .strategy-card:hover {
-            background: rgba(255,255,255,0.08);
-            transform: translateY(-10px);
-            border-color: var(--accent-gold);
-        }
-
-        .strategy-card h3 {
-            color: var(--soft-white);
-            margin-bottom: 15px;
-            font-size: 1.4rem;
-        }
-
-        .strategy-card p {
-            color: rgba(255,255,255,0.8);
-            font-size: 0.95rem;
-            line-height: 1.6;
-        }
-
-        /* --- VALUE & OUTCOMES --- */
-        .value-prop {
-            background-color: var(--pure-white);
-        }
-
-        .value-prop h2 {
-            font-size: 2.5rem;
-            margin-bottom: 25px;
-        }
-
-        .value-prop .lead {
-            max-width: 700px;
-            margin: 0 auto 60px auto;
-            font-size: 1.2rem;
-            color: var(--text-grey);
-        }
-
-        .outcomes {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 60px;
-        }
-
-        .outcome-item {
-            text-align: center;
-            max-width: 280px;
-        }
-
-        .outcome-icon {
-            font-size: 2.5rem;
-            color: var(--primary-green);
-            margin-bottom: 20px;
-            display: block;
-            opacity: 0.8;
-        }
-
-        .outcome-item h4 {
-            margin-bottom: 10px;
-        }
-
-        /* --- REVIEWS SECTION --- */
-        .reviews {
-            background-color: #f9f9f9;
-        }
-
-        .reviews-header {
-            text-align: center;
-            margin-bottom: 60px;
-        }
-
-        .reviews-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 30px;
-        }
-
-        .review-card {
-            background: var(--pure-white);
-            padding: 40px;
-            border-radius: 8px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.03);
-            transition: var(--transition);
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            border: 1px solid #eee;
-        }
-
-        .review-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 30px rgba(0,0,0,0.08);
-            border-color: var(--accent-gold);
-        }
-
-        .quote-icon {
-            color: var(--accent-gold);
-            font-size: 2rem;
-            margin-bottom: 20px;
-            font-family: serif;
-            opacity: 0.5;
-        }
-
-        .review-text {
-            font-style: italic;
-            color: var(--charcoal);
-            margin-bottom: 30px;
-            font-size: 1.05rem;
-        }
-
-        .reviewer-info {
-            display: flex;
-            align-items: center;
-            border-top: 1px solid #eee;
-            padding-top: 20px;
-        }
-
-        .reviewer-img {
-            width: 55px;
-            height: 55px;
-            border-radius: 50%;
-            object-fit: cover;
-            margin-right: 15px;
-            border: 2px solid var(--accent-gold);
-        }
-
-        .reviewer-details h4 {
-            font-size: 1rem;
-            margin-bottom: 2px;
-            color: var(--primary-green);
-        }
-
-        .reviewer-details span {
-            font-size: 0.75rem;
-            color: var(--text-grey);
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-
-        /* --- LEAD CAPTURE FORM --- */
-        .lead-capture {
-            background-color: var(--soft-white);
-            position: relative;
-        }
-
-        .form-container {
-            background: var(--pure-white);
-            padding: 60px;
-            max-width: 700px;
-            margin: 0 auto;
-            border-radius: 4px;
-            box-shadow: 0 20px 50px rgba(0,0,0,0.08);
-            border-top: 4px solid var(--primary-green);
-        }
-
-        .form-group {
-            margin-bottom: 25px;
-            text-align: left;
-        }
-
-        .form-group label {
-            display: block;
-            margin-bottom: 8px;
-            font-size: 0.85rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            color: var(--primary-green);
-        }
-
-        .form-control {
-            width: 100%;
-            padding: 16px;
-            font-family: 'Lato', sans-serif;
-            font-size: 1rem;
-            border: 1px solid #ddd;
-            border-radius: 2px;
-            background-color: #fcfcfc;
-            transition: var(--transition);
-        }
-
-        .form-control:focus {
-            outline: none;
-            border-color: var(--accent-gold);
-            background-color: #fff;
-            box-shadow: 0 0 0 3px rgba(197, 160, 89, 0.1);
-        }
-
-        select.form-control {
-            cursor: pointer;
-        }
-
-        #form-success {
-            display: none;
-            text-align: center;
-            padding: 40px;
-        }
-        
-        #form-success h3 {
-            color: var(--primary-green);
-            margin-bottom: 15px;
-        }
-
-        /* --- FOOTER --- */
-        footer {
-            background-color: var(--charcoal);
-            color: rgba(255,255,255,0.4);
-            padding: 100px 0 40px 0;
-            background-image: url('https://picsum.photos/seed/marblegreen/1920/600');
-            background-size: cover;
-            background-position: center;
-            position: relative;
-            text-align: center;
-        }
-
-        footer::before {
-            content: '';
-            position: absolute;
-            top: 0; left: 0; right: 0; bottom: 0;
-            background: linear-gradient(to bottom, rgba(5,43,34,0.95), #111);
-            z-index: 1;
-        }
-
-        .footer-content {
-            position: relative;
-            z-index: 2;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        .footer-logo {
-            font-family: 'Playfair Display', serif;
-            font-size: 2rem;
-            color: var(--pure-white);
-            margin-bottom: 15px;
-        }
-
-        .footer-tagline {
-            font-style: italic;
-            margin-bottom: 40px;
-            color: var(--accent-gold);
-            font-size: 1.1rem;
-        }
-
-        .contact-info {
-            font-size: 1.1rem;
-            margin-bottom: 40px;
-        }
-
-        .contact-info a {
-            color: var(--pure-white);
-            border-bottom: 1px solid var(--accent-gold);
-            padding-bottom: 2px;
-            cursor: pointer;
-        }
-        
-        .contact-info a:hover {
-            color: var(--accent-gold);
-        }
-
-        .copyright {
-            font-size: 0.8rem;
-            border-top: 1px solid rgba(255,255,255,0.1);
-            padding-top: 20px;
-            width: 100%;
-            max-width: 600px;
-            opacity: 0.6;
-        }
-
-        /* --- ANIMATIONS --- */
-        @keyframes heroFadeIn {
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        @keyframes lineExpand {
-            to { transform: scaleX(1); }
-        }
-
-        @keyframes arrowFade {
-            to { opacity: 1; }
-        }
-
-        .fade-in-up {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-        }
-
-        .fade-in-up.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        /* --- RESPONSIVE --- */
-        @media (max-width: 768px) {
-            .hero h1 { font-size: 2.8rem; }
-            .discovery-grid { grid-template-columns: 1fr; }
-            .nav-links { display: none; }
-            .intro-text { font-size: 1.1rem; }
-            .discovery-image { margin-top: 40px; }
-            .form-container { padding: 30px 20px; }
-        }
-    </style>
+    #loading-screen {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: linear-gradient(135deg, #0d4a3a 0%, #083028 50%, #0d4a3a 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 9999;
+      transition: opacity 0.8s ease, visibility 0.8s ease;
+    }
+    
+    #loading-screen.fade-out { opacity: 0; visibility: hidden; }
+    
+    .logo-container { text-align: center; animation: logoReveal 1.5s ease-out forwards; }
+    
+    @keyframes logoReveal {
+      0% { opacity: 0; transform: scale(0.8); }
+      50% { opacity: 1; transform: scale(1.05); }
+      100% { opacity: 1; transform: scale(1); }
+    }
+    
+    .logo-glow { animation: glowPulse 2s ease-in-out infinite; }
+    
+    @keyframes glowPulse {
+      0%, 100% { filter: drop-shadow(0 0 20px rgba(201, 169, 98, 0.5)); }
+      50% { filter: drop-shadow(0 0 40px rgba(201, 169, 98, 0.8)); }
+    }
+    
+    .loading-bar-container {
+      width: 200px; height: 3px;
+      background: rgba(255,255,255,0.2);
+      border-radius: 10px;
+      margin-top: 30px;
+      overflow: hidden;
+    }
+    
+    .loading-bar {
+      height: 100%;
+      background: linear-gradient(90deg, #c9a962, #dfc585, #c9a962);
+      border-radius: 10px;
+      animation: loadingProgress 2s ease-in-out forwards;
+    }
+    
+    @keyframes loadingProgress { 0% { width: 0%; } 100% { width: 100%; } }
+    
+    .loading-text {
+      color: rgba(255,255,255,0.7);
+      font-size: 14px;
+      margin-top: 15px;
+      animation: textFade 1s ease-in-out infinite alternate;
+    }
+    
+    @keyframes textFade { 0% { opacity: 0.5; } 100% { opacity: 1; } }
+    
+    .particles {
+      position: absolute;
+      width: 100%; height: 100%;
+      overflow: hidden;
+      pointer-events: none;
+    }
+    
+    .particle {
+      position: absolute;
+      width: 4px; height: 4px;
+      background: rgba(201, 169, 98, 0.6);
+      border-radius: 50%;
+      animation: floatParticle 4s ease-in-out infinite;
+    }
+    
+    @keyframes floatParticle {
+      0%, 100% { transform: translateY(0) rotate(0deg); opacity: 0; }
+      10% { opacity: 1; }
+      90% { opacity: 1; }
+      100% { transform: translateY(-100vh) rotate(720deg); opacity: 0; }
+    }
+    
+    @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
+    @keyframes bounce { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-5px); } }
+    
+    .animate-float { animation: float 3s ease-in-out infinite; }
+    .animate-bounce-slow { animation: bounce 2s ease-in-out infinite; }
+    
+    .text-gold-gradient {
+      background: linear-gradient(135deg, #c9a962 0%, #dfc585 50%, #c9a962 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    
+    .card-hover { transition: all 0.3s ease; }
+    .card-hover:hover { transform: translateY(-5px); box-shadow: 0 20px 40px rgba(13, 74, 58, 0.15); }
+    
+    .page { display: none; }
+    .page.active { display: block; }
+    
+    ::-webkit-scrollbar { width: 8px; }
+    ::-webkit-scrollbar-track { background: #f1f1f1; }
+    ::-webkit-scrollbar-thumb { background: #0d4a3a; border-radius: 4px; }
+    ::-webkit-scrollbar-thumb:hover { background: #1a6b54; }
+    
+    .service-card { position: relative; overflow: hidden; }
+    .service-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: -100%;
+      width: 100%; height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+      transition: left 0.5s ease;
+    }
+    .service-card:hover::before { left: 100%; }
+  </style>
 </head>
-<body>
+<body class="font-sans antialiased bg-white text-gray-900">
 
-    <!-- NAVIGATION -->
-    <nav>
-        <div class="container nav-inner">
-            <div class="logo">greenmarblesprsolutions</div>
-            <div class="nav-links">
-                <a href="#discovery">Our Approach</a>
-                <a href="#strategy">BookTok Strategy</a>
-                <a href="#reviews">Author Success</a>
-                <a href="#lead-capture">Get Started</a>
+  <!-- LOADING SCREEN -->
+  <div id="loading-screen">
+    <div class="particles" id="particles"></div>
+    <div class="logo-container">
+      <div class="logo-glow mb-6">
+        <svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg" class="mx-auto">
+          <circle cx="60" cy="60" r="58" fill="#0d4a3a" stroke="#c9a962" stroke-width="2"/>
+          <g transform="translate(25, 75)">
+            <path d="M0 0 Q17 -8 35 0 L35 25 Q17 17 0 25 Z" fill="#c9a962"/>
+            <path d="M35 0 Q52 -8 70 0 L70 25 Q52 17 35 25 Z" fill="#dfc585"/>
+            <line x1="35" y1="0" x2="35" y2="25" stroke="#0d4a3a" stroke-width="2"/>
+          </g>
+          <g transform="translate(30, 15)">
+            <path d="M0 10 Q0 0 10 0 L50 0 Q60 0 60 10 L60 35 Q60 45 50 45 L35 45 L30 55 L25 45 L10 45 Q0 45 0 35 Z" fill="white" stroke="#c9a962" stroke-width="2"/>
+            <rect x="10" y="30" width="6" height="10" fill="#0d4a3a" rx="1"/>
+            <rect x="20" y="22" width="6" height="18" fill="#0d4a3a" rx="1"/>
+            <rect x="30" y="15" width="6" height="25" fill="#1a6b54" rx="1"/>
+            <rect x="40" y="8" width="6" height="32" fill="#c9a962" rx="1"/>
+            <path d="M12 35 L30 18 L48 10" stroke="#c9a962" stroke-width="2" fill="none" stroke-linecap="round"/>
+          </g>
+        </svg>
+      </div>
+      <h2 class="text-white text-2xl font-display font-semibold mb-1">Green Marbles</h2>
+      <p class="text-gold text-sm tracking-widest uppercase">PR & Publishing</p>
+      <div class="loading-bar-container mx-auto"><div class="loading-bar"></div></div>
+      <p class="loading-text">Loading your experience...</p>
+    </div>
+  </div>
+
+  <!-- MAIN WEBSITE -->
+  <div id="main-content" style="opacity: 0; transition: opacity 0.5s ease;">
+    
+    <!-- Navigation -->
+    <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md shadow-sm transition-all duration-300">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-16 lg:h-20">
+          <a href="#" onclick="showPage('home')" class="flex items-center gap-3 group">
+            <div class="flex flex-col">
+              <span class="font-display font-bold text-brand text-xl leading-tight">Green Marbles</span>
+              <span class="text-xs text-gold tracking-widest uppercase">PR & Publishing</span>
             </div>
+          </a>
+          <div class="hidden lg:flex items-center gap-1">
+            <a href="#" onclick="showPage('home')" class="nav-link px-4 py-2 rounded-lg text-sm font-medium transition-all" data-page="home">Home</a>
+            <a href="#" onclick="showPage('promotion')" class="nav-link px-4 py-2 rounded-lg text-sm font-medium transition-all" data-page="promotion">Promotion</a>
+            <a href="#" onclick="showPage('publishing')" class="nav-link px-4 py-2 rounded-lg text-sm font-medium transition-all" data-page="publishing">Publishing</a>
+            <a href="#" onclick="showPage('about')" class="nav-link px-4 py-2 rounded-lg text-sm font-medium transition-all" data-page="about">About</a>
+            <a href="#" onclick="showPage('portfolio')" class="nav-link px-4 py-2 rounded-lg text-sm font-medium transition-all" data-page="portfolio">Portfolio</a>
+            <a href="#" onclick="showPage('contact')" class="nav-link px-4 py-2 rounded-lg text-sm font-medium transition-all" data-page="contact">Contact</a>
+          </div>
+          <a href="#" onclick="showPage('home')" class="flex items-center">
+            <img src="logo.png" alt="Green Marbles Logo" class="h-12 w-auto" onerror="this.style.display='none'">
+          </a>
+          <button onclick="toggleMobileMenu()" class="lg:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors">
+            <svg id="menu-icon" class="w-6 h-6 text-brand" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+            </svg>
+            <svg id="close-icon" class="w-6 h-6 text-brand hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+            </svg>
+          </button>
         </div>
+      </div>
+      <div id="mobile-menu" class="lg:hidden hidden bg-white border-t border-gray-100">
+        <div class="px-4 py-4 space-y-2">
+          <a href="#" onclick="showPage('home'); toggleMobileMenu()" class="block px-4 py-3 rounded-lg text-sm font-medium text-gray-600 hover:text-brand hover:bg-gray-100">Home</a>
+          <a href="#" onclick="showPage('promotion'); toggleMobileMenu()" class="block px-4 py-3 rounded-lg text-sm font-medium text-gray-600 hover:text-brand hover:bg-gray-100">Promotion</a>
+          <a href="#" onclick="showPage('publishing'); toggleMobileMenu()" class="block px-4 py-3 rounded-lg text-sm font-medium text-gray-600 hover:text-brand hover:bg-gray-100">Publishing</a>
+          <a href="#" onclick="showPage('about'); toggleMobileMenu()" class="block px-4 py-3 rounded-lg text-sm font-medium text-gray-600 hover:text-brand hover:bg-gray-100">About</a>
+          <a href="#" onclick="showPage('portfolio'); toggleMobileMenu()" class="block px-4 py-3 rounded-lg text-sm font-medium text-gray-600 hover:text-brand hover:bg-gray-100">Portfolio</a>
+          <a href="#" onclick="showPage('contact'); toggleMobileMenu()" class="block px-4 py-3 rounded-lg text-sm font-medium text-gray-600 hover:text-brand hover:bg-gray-100">Contact</a>
+        </div>
+      </div>
     </nav>
 
-    <!-- HERO SECTION -->
-    <header class="hero">
-        <div class="container hero-content">
-            <div class="book-reveal"></div>
-            
-            <h1>Your Story Deserves to be Seen.<br>Let's Make it Unmissable.</h1>
-            
-            <p class="subheadline">
-                To the authors who pour their souls into every page: we see you. 
-                Let's bridge the gap between your dedication and the readers waiting for your voice.
-            </p>
-            
-            <div style="margin-top: 40px;">
-                <!-- This button scrolls to the form -->
-                <a href="#lead-capture" class="btn">Begin Your Journey</a>
+    <!-- HOME PAGE -->
+    <div id="page-home" class="page active">
+      <section class="relative min-h-screen flex items-center justify-center overflow-hidden">
+        <div class="absolute inset-0 z-0 bg-gradient-to-br from-brand via-brand-light to-brand"></div>
+        <div class="absolute inset-0 bg-gradient-to-b from-brand/80 via-brand/70 to-brand/90"></div>
+        <div class="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center pt-20">
+          <div class="mb-8 animate-float">
+            <div class="w-28 h-28 sm:w-36 sm:h-36 mx-auto relative">
+              <img src="logo.png" alt="Green Marbles Logo" class="w-full h-full object-contain logo-glow" onerror="this.style.display='none'">
             </div>
+          </div>
+          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-display font-bold text-white mb-4">
+            Where Stories Find <span class="text-gold-gradient">Their Readers</span>
+          </h1>
+          <p class="text-xl sm:text-2xl text-white/90 mb-4 max-w-3xl mx-auto">
+            Your trusted partner for BookTok Promotion & Professional Publishing Services
+          </p>
+          <p class="text-lg text-gold mb-10 italic">Green Marbles PR & Publishing</p>
+          
+          <div class="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto mb-12">
+            <div class="service-card bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 hover:bg-white/20 transition-all cursor-pointer group" onclick="showPage('promotion')">
+              <div class="w-16 h-16 rounded-full bg-gold flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform">
+                <svg class="w-8 h-8 text-brand" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5.882V19.24a1.76 1.76 0 01-3.417.592l-2.147-6.15M18 13a3 3 0 100-6M5.436 13.683A4.001 4.001 0 017 6h1.832c4.1 0 7.625-1.234 9.168-3v14c-1.543-1.766-5.067-3-9.168-3H7a3.988 3.988 0 01-1.564-.317z"/>
+                </svg>
+              </div>
+              <h3 class="text-2xl font-display font-semibold text-white mb-3">BookTok Promotion</h3>
+              <p class="text-white/80 mb-6">Strategic marketing campaigns that connect your book with passionate readers on TikTok's biggest book community.</p>
+              <span class="inline-flex items-center text-gold font-medium">Explore Promotion Services <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg></span>
+            </div>
+            <div class="service-card bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 hover:bg-white/20 transition-all cursor-pointer group" onclick="showPage('publishing')">
+              <div class="w-16 h-16 rounded-full bg-gold flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform">
+                <svg class="w-8 h-8 text-brand" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
+                </svg>
+              </div>
+              <h3 class="text-2xl font-display font-semibold text-white mb-3">Publishing Services</h3>
+              <p class="text-white/80 mb-6">Full-service publishing support from manuscript to market. Editing, design, formatting, and distribution.</p>
+              <span class="inline-flex items-center text-gold font-medium">Explore Publishing Services <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg></span>
+            </div>
+          </div>
         </div>
-    </header>
-
-    <!-- INTRODUCTION (Strictly 2 Lines) -->
-    <section class="intro-section">
-        <div class="container">
-            <p class="intro-text">
-                We bridge the gap between exceptional storytelling and global discovery.<br>
-                Strategic, data-driven BookTok promotion for authors ready for their next level.
-            </p>
+        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-10">
+          <div class="w-6 h-10 border-2 border-white/50 rounded-full flex justify-center pt-2">
+            <div class="w-1 h-3 bg-white/70 rounded-full animate-bounce-slow"></div>
+          </div>
         </div>
-    </section>
+      </section>
 
-    <!-- HOW I FOUND YOU & DISCOVERY -->
-    <section id="discovery" class="discovery section-padding">
-        <div class="container discovery-grid">
-            <div class="discovery-text fade-in-up">
-                <h2>It wasn’t by chance that I found you.</h2>
-                <p>In a digital landscape crowded with noise, true artistry stands out with a distinct frequency. I’ve been observing your genre, and amidst the trends, your storytelling voice carries a resonance that stopped me scrolling.</p>
-                <p>I noticed the dedication you put into your craft—the consistency, the world-building, and the heart of your narratives. You aren't just writing books; you are building a legacy. But talent alone isn't always enough to break through the algorithm.</p>
-                <div class="highlight-box">
-                    <p>"You were chosen not because you need a quick fix, but because your work has the potential to define the market. Let's ensure the world finds it."</p>
-                </div>
-            </div>
-            <div class="discovery-image fade-in-up">
-                <img src="https://picsum.photos/seed/authorfocused/600/500" alt="Author focused on creative workspace">
-            </div>
+      <section class="py-16 bg-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+            <div><div class="text-4xl font-bold text-brand mb-2">500+</div><div class="text-gray-600">Authors Helped</div></div>
+            <div><div class="text-4xl font-bold text-brand mb-2">150+</div><div class="text-gray-600">Books Published</div></div>
+            <div><div class="text-4xl font-bold text-brand mb-2">340%</div><div class="text-gray-600">Average Sales Growth</div></div>
+            <div><div class="text-4xl font-bold text-brand mb-2">10M+</div><div class="text-gray-600">Reader Reach</div></div>
+          </div>
         </div>
-    </section>
+      </section>
 
-    <!-- STRATEGY: BOOKTOK FOCUS -->
-    <section id="strategy" class="strategy section-padding">
-        <div class="container strategy-content">
-            <div class="text-center fade-in-up">
-                <h2>The Science of BookTok Growth</h2>
-                <p class="strategy-sub">We don't chase viral moments; we build sustainable ecosystems.</p>
+      <section class="py-20 bg-gray-50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="text-center mb-16">
+            <h2 class="text-3xl sm:text-4xl font-display font-bold text-brand mb-4">Why Authors Choose Green Marbles</h2>
+          </div>
+          <div class="grid md:grid-cols-3 gap-8">
+            <div class="bg-white rounded-2xl p-8 shadow-lg card-hover">
+              <div class="w-14 h-14 rounded-xl bg-brand/10 flex items-center justify-center mb-6">
+                <svg class="w-7 h-7 text-brand" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>
+              </div>
+              <h3 class="text-xl font-semibold text-brand mb-3">Reader-First Approach</h3>
+              <p class="text-gray-600">We connect your book with readers who will genuinely love it.</p>
             </div>
-
-            <div class="strategy-grid fade-in-up">
-                <div class="strategy-card">
-                    <h3>Targeted Discovery</h3>
-                    <p>We identify the exact micro-communities on TikTok that are hungry for your specific tropes and genre. No wasted impressions.</p>
-                </div>
-                <div class="strategy-card">
-                    <h3>Algorithmic Intelligence</h3>
-                    <p>We analyze content structures that trigger the algorithm favorably, ensuring your trailers and teasers gain organic traction.</p>
-                </div>
-                <div class="strategy-card">
-                    <h3>Authentic Engagement</h3>
-                    <p>We foster conversations, not just views. Our strategy encourages readers to create user-generated content, amplifying your reach.</p>
-                </div>
-                <div class="strategy-card">
-                    <h3>Sustainable Visibility</h3>
-                    <p>Building a brand that lasts. We ensure today's popularity translates into a long-term, loyal readership for your future releases.</p>
-                </div>
+            <div class="bg-white rounded-2xl p-8 shadow-lg card-hover">
+              <div class="w-14 h-14 rounded-xl bg-brand/10 flex items-center justify-center mb-6">
+                <svg class="w-7 h-7 text-brand" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+              </div>
+              <h3 class="text-xl font-semibold text-brand mb-3">All-in-One Solution</h3>
+              <p class="text-gray-600">From manuscript editing to BookTok marketing, we handle everything.</p>
             </div>
+            <div class="bg-white rounded-2xl p-8 shadow-lg card-hover">
+              <div class="w-14 h-14 rounded-xl bg-brand/10 flex items-center justify-center mb-6">
+                <svg class="w-7 h-7 text-brand" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/></svg>
+              </div>
+              <h3 class="text-xl font-semibold text-brand mb-3">Proven Results</h3>
+              <p class="text-gray-600">Our authors see real growth in sales and reader communities.</p>
+            </div>
+          </div>
         </div>
-    </section>
+      </section>
 
-    <!-- VALUE PROPOSITION -->
-    <section class="value-prop section-padding">
-        <div class="container fade-in-up">
-            <h2 class="text-center">Why This Partnership Works</h2>
-            <p class="lead text-center">Marketing is often treated as an expense. At Green Marbles, we view it as a strategic investment in your intellectual property.</p>
-            
-            <div class="outcomes">
-                <div class="outcome-item">
-                    <span class="outcome-icon">✦</span>
-                    <h4>Enhanced Visibility</h4>
-                    <p style="font-size: 0.9rem; color: var(--text-grey);">Step out of the shadows and into the spotlight where your genre thrives.</p>
-                </div>
-                <div class="outcome-item">
-                    <span class="outcome-icon">❖</span>
-                    <h4>Loyal Readership</h4>
-                    <p style="font-size: 0.9rem; color: var(--text-grey);">Convert casual scrollers into devoted fans who pre-order everything you write.</p>
-                </div>
-                <div class="outcome-item">
-                    <span class="outcome-icon">✦</span>
-                    <h4>Higher Sales Potential</h4>
-                    <p style="font-size: 0.9rem; color: var(--text-grey);">Direct correlation between targeted exposure and Amazon sales charts.</p>
-                </div>
-            </div>
+      <section class="py-20 bg-gradient-to-b from-brand to-brand-dark">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 class="text-3xl sm:text-4xl font-display font-bold text-white mb-6">Ready to Start Your Journey?</h2>
+          <p class="text-xl text-white/80 mb-8">Whether you need promotion, publishing, or both - we're here to help.</p>
+          <a href="#" onclick="showPage('contact')" class="inline-flex items-center justify-center px-8 py-4 bg-gold hover:bg-gold-light text-brand font-semibold text-lg rounded-full shadow-xl transition-all hover:scale-105">Get Started Today <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg></a>
         </div>
-    </section>
+      </section>
+    </div>
 
-    <!-- REVIEWS (Social Proof) -->
-    <section id="reviews" class="reviews section-padding">
-        <div class="container">
-            <div class="reviews-header fade-in-up">
-                <h2>Voices of Success</h2>
-                <p style="color: var(--text-grey);">Real authors. Real growth. No bots.</p>
-            </div>
-
-            <div class="reviews-grid">
-                <!-- Review 1 -->
-                <div class="review-card fade-in-up">
-                    <div>
-                        <div class="quote-icon">“</div>
-                        <p class="review-text">Green Marbles didn't just promote my book; they understood the soul of it. My sales tripled in two months, and I finally feel connected to my readers.</p>
-                    </div>
-                    <div class="reviewer-info">
-                        <img src="https://picsum.photos/seed/author1/100/100" alt="Sarah J." class="reviewer-img">
-                        <div class="reviewer-details">
-                            <h4>Sarah Jenkins</h4>
-                            <span>Amazon Bestseller</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Review 2 -->
-                <div class="review-card fade-in-up">
-                    <div>
-                        <div class="quote-icon">“</div>
-                        <p class="review-text">I was skeptical about TikTok, but their strategic approach changed my mind. The book trailer they created was cinematic art, not just an ad.</p>
-                    </div>
-                    <div class="reviewer-info">
-                        <img src="https://picsum.photos/seed/author2/100/100" alt="Marcus T." class="reviewer-img">
-                        <div class="reviewer-details">
-                            <h4>Marcus Thorne</h4>
-                            <span>Goodreads Author</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Review 3 -->
-                <div class="review-card fade-in-up">
-                    <div>
-                        <div class="quote-icon">“</div>
-                        <p class="review-text">Professional, empathetic, and incredibly effective. They treated my debut novel with the respect of a bestseller. Highly recommended.</p>
-                    </div>
-                    <div class="reviewer-info">
-                        <img src="https://picsum.photos/seed/author3/100/100" alt="Elena R." class="reviewer-img">
-                        <div class="reviewer-details">
-                            <h4>Elena Rodriguez</h4>
-                            <span>BookTok Influencer</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Review 4 -->
-                <div class="review-card fade-in-up">
-                    <div>
-                        <div class="quote-icon">“</div>
-                        <p class="review-text">The ROI on their campaigns is unlike anything I've seen in indie publishing. They found my audience in ways I couldn't have done alone.</p>
-                    </div>
-                    <div class="reviewer-info">
-                        <img src="https://picsum.photos/seed/author4/100/100" alt="David K." class="reviewer-img">
-                        <div class="reviewer-details">
-                            <h4>David Kim</h4>
-                            <span>Barnes & Noble Press</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Review 5 -->
-                <div class="review-card fade-in-up">
-                    <div>
-                        <div class="quote-icon">“</div>
-                        <p class="review-text">From the first email, I felt heard. The strategy was calm, confident, and the results spoke for themselves. My visibility skyrocketed.</p>
-                    </div>
-                    <div class="reviewer-info">
-                        <img src="https://picsum.photos/seed/author5/100/100" alt="Jessica M." class="reviewer-img">
-                        <div class="reviewer-details">
-                            <h4>Jessica Moore</h4>
-                            <span>Amazon Reviewer</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Review 6 -->
-                <div class="review-card fade-in-up">
-                    <div>
-                        <div class="quote-icon">“</div>
-                        <p class="review-text">An elite service. The aesthetic of the promotion materials matched the quality of my writing. It feels good to be in professional hands.</p>
-                    </div>
-                    <div class="reviewer-info">
-                        <img src="https://picsum.photos/seed/author6/100/100" alt="Alistair P." class="reviewer-img">
-                        <div class="reviewer-details">
-                            <h4>Alistair P.</h4>
-                            <span>Kobo Writing Life</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
+    <!-- PROMOTION PAGE -->
+    <div id="page-promotion" class="page">
+      <section class="relative py-32 bg-gradient-to-br from-brand via-brand-light to-brand overflow-hidden">
+        <div class="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <div class="w-20 h-20 rounded-full bg-gold flex items-center justify-center mx-auto mb-8">
+            <svg class="w-10 h-10 text-brand" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5.882V19.24a1.76 1.76 0 01-3.417.592l-2.147-6.15M18 13a3 3 0 100-6M5.436 13.683A4.001 4.001 0 017 6h1.832c4.1 0 7.625-1.234 9.168-3v14c-1.543-1.766-5.067-3-9.168-3H7a3.988 3.988 0 01-1.564-.317z"/></svg>
+          </div>
+          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-display font-bold text-white mb-6">BookTok <span class="text-gold-gradient">Promotion</span></h1>
+          <p class="text-xl sm:text-2xl text-white/90 max-w-3xl mx-auto">Strategic marketing campaigns that connect your book with millions of passionate readers on TikTok</p>
         </div>
-    </section>
+      </section>
 
-    <!-- LEAD CAPTURE FORM -->
-    <section id="lead-capture" class="lead-capture section-padding">
-        <div class="container">
-            <div class="form-container fade-in-up">
+      <section class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="grid lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <h2 class="text-3xl sm:text-4xl font-display font-bold text-brand mb-6">What is BookTok?</h2>
+              <div class="space-y-4 text-gray-600 leading-relaxed">
+                <p>BookTok is TikTok's massive book community - a space where millions of readers discover, discuss, and fall in love with books every single day. It's the most influential book marketing platform in recent years.</p>
+                <p>Videos tagged #BookTok have garnered over 200 billion views, making it a powerhouse for driving book sales and creating bestsellers overnight.</p>
+                <p>We understand what makes BookTok tick. We know the trends, the tropes readers love, and how to position your book for maximum visibility.</p>
+              </div>
+            </div>
+            <div class="bg-gradient-to-br from-brand/10 to-gold/20 rounded-3xl p-8">
+              <div class="grid grid-cols-2 gap-4">
+                <div class="bg-white rounded-xl p-6 shadow-lg text-center"><div class="text-3xl font-bold text-brand">200B+</div><div class="text-sm text-gray-500">#BookTok Views</div></div>
+                <div class="bg-white rounded-xl p-6 shadow-lg text-center"><div class="text-3xl font-bold text-brand">50M+</div><div class="text-sm text-gray-500">Active Readers</div></div>
+                <div class="bg-white rounded-xl p-6 shadow-lg text-center"><div class="text-3xl font-bold text-brand">#1</div><div class="text-sm text-gray-500">Book Discovery Platform</div></div>
+                <div class="bg-white rounded-xl p-6 shadow-lg text-center"><div class="text-3xl font-bold text-brand">24/7</div><div class="text-sm text-gray-500">Global Reach</div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="text-center mb-16">
+            <h2 class="text-3xl sm:text-4xl font-display font-bold text-brand mb-4">Our Promotion Services</h2>
+          </div>
+          <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="bg-white rounded-2xl p-8 shadow-lg card-hover">
+              <div class="w-14 h-14 rounded-xl bg-brand/10 flex items-center justify-center mb-6"><svg class="w-7 h-7 text-brand" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg></div>
+              <h3 class="text-xl font-semibold text-brand mb-3">BookTok Strategy</h3>
+              <p class="text-gray-600">Custom content plans with targeted hashtag strategies.</p>
+            </div>
+            <div class="bg-white rounded-2xl p-8 shadow-lg card-hover">
+              <div class="w-14 h-14 rounded-xl bg-brand/10 flex items-center justify-center mb-6"><svg class="w-7 h-7 text-brand" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/></svg></div>
+              <h3 class="text-xl font-semibold text-brand mb-3">Reader Discovery</h3>
+              <p class="text-gray-600">Connect with readers actively searching for your genre.</p>
+            </div>
+            <div class="bg-white rounded-2xl p-8 shadow-lg card-hover">
+              <div class="w-14 h-14 rounded-xl bg-brand/10 flex items-center justify-center mb-6"><svg class="w-7 h-7 text-brand" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg></div>
+              <h3 class="text-xl font-semibold text-brand mb-3">Book Trailers</h3>
+              <p class="text-gray-600">Captivating video content that encourages viral sharing.</p>
+            </div>
+            <div class="bg-white rounded-2xl p-8 shadow-lg card-hover">
+              <div class="w-14 h-14 rounded-xl bg-brand/10 flex items-center justify-center mb-6"><svg class="w-7 h-7 text-brand" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg></div>
+              <h3 class="text-xl font-semibold text-brand mb-3">Community Building</h3>
+              <p class="text-gray-600">Build genuine relationships with loyal fans and advocates.</p>
+            </div>
+            <div class="bg-white rounded-2xl p-8 shadow-lg card-hover">
+              <div class="w-14 h-14 rounded-xl bg-brand/10 flex items-center justify-center mb-6"><svg class="w-7 h-7 text-brand" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5.882V19.24a1.76 1.76 0 01-3.417.592l-2.147-6.15M18 13a3 3 0 100-6M5.436 13.683A4.001 4.001 0 017 6h1.832c4.1 0 7.625-1.234 9.168-3v14c-1.543-1.766-5.067-3-9.168-3H7a3.988 3.988 0 01-1.564-.317z"/></svg></div>
+              <h3 class="text-xl font-semibold text-brand mb-3">Influencer Outreach</h3>
+              <p class="text-gray-600">Connect with BookTok influencers and reviewers.</p>
+            </div>
+            <div class="bg-white rounded-2xl p-8 shadow-lg card-hover">
+              <div class="w-14 h-14 rounded-xl bg-brand/10 flex items-center justify-center mb-6"><svg class="w-7 h-7 text-brand" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/></svg></div>
+              <h3 class="text-xl font-semibold text-brand mb-3">Sustainable Visibility</h3>
+              <p class="text-gray-600">Long-term momentum beyond launch week.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="py-20 bg-gradient-to-b from-brand to-brand-dark">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 class="text-3xl sm:text-4xl font-display font-bold text-white mb-6">Ready to Go Viral on BookTok?</h2>
+          <a href="#" onclick="showPage('contact')" class="inline-flex items-center justify-center px-8 py-4 bg-gold hover:bg-gold-light text-brand font-semibold text-lg rounded-full shadow-xl transition-all hover:scale-105">Start Your Campaign <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg></a>
+        </div>
+      </section>
+    </div>
+
+    <!-- PUBLISHING PAGE -->
+    <div id="page-publishing" class="page">
+      <section class="relative py-32 bg-gradient-to-br from-brand via-brand-light to-brand overflow-hidden">
+        <div class="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <div class="w-20 h-20 rounded-full bg-gold flex items-center justify-center mx-auto mb-8">
+            <svg class="w-10 h-10 text-brand" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
+          </div>
+          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-display font-bold text-white mb-6">Publishing <span class="text-gold-gradient">Services</span></h1>
+          <p class="text-xl sm:text-2xl text-white/90 max-w-3xl mx-auto">From manuscript to market - professional publishing support for every step of your journey</p>
+        </div>
+      </section>
+
+      <section class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="grid lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <h2 class="text-3xl sm:text-4xl font-display font-bold text-brand mb-6">Your Publishing Partner</h2>
+              <div class="space-y-4 text-gray-600 leading-relaxed">
+                <p>Navigating the publishing world can be overwhelming. Having the right support makes all the difference between a manuscript and a successful book.</p>
+                <p>At Green Marbles, we provide comprehensive publishing services that guide you through every stage - from polishing your manuscript to getting your book into readers' hands worldwide.</p>
+                <p>Our team of editors, designers, and publishing experts work together to transform your vision into a professionally published book.</p>
+              </div>
+            </div>
+            <div class="bg-gradient-to-br from-brand/10 to-gold/20 rounded-3xl p-8">
+              <img src="https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?w=500&h=400&fit=crop" alt="Publishing" class="rounded-2xl shadow-xl w-full">
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="text-center mb-16">
+            <h2 class="text-3xl sm:text-4xl font-display font-bold text-brand mb-4">What We Offer</h2>
+          </div>
+          <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="bg-white rounded-2xl p-8 shadow-lg card-hover">
+              <div class="w-14 h-14 rounded-xl bg-brand/10 flex items-center justify-center mb-6"><svg class="w-7 h-7 text-brand" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"/></svg></div>
+              <h3 class="text-xl font-semibold text-brand mb-3">Editing Services</h3>
+              <p class="text-gray-600">Developmental editing, line editing, and proofreading to perfection.</p>
+            </div>
+            <div class="bg-white rounded-2xl p-8 shadow-lg card-hover">
+              <div class="w-14 h-14 rounded-xl bg-brand/10 flex items-center justify-center mb-6"><svg class="w-7 h-7 text-brand" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg></div>
+              <h3 class="text-xl font-semibold text-brand mb-3">Cover Design</h3>
+              <p class="text-gray-600">Stunning, market-ready cover designs that attract readers.</p>
+            </div>
+            <div class="bg-white rounded-2xl p-8 shadow-lg card-hover">
+              <div class="w-14 h-14 rounded-xl bg-brand/10 flex items-center justify-center mb-6"><svg class="w-7 h-7 text-brand" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg></div>
+              <h3 class="text-xl font-semibold text-brand mb-3">Formatting</h3>
+              <p class="text-gray-600">Professional formatting for print and e-book formats.</p>
+            </div>
+            <div class="bg-white rounded-2xl p-8 shadow-lg card-hover">
+              <div class="w-14 h-14 rounded-xl bg-brand/10 flex items-center justify-center mb-6"><svg class="w-7 h-7 text-brand" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"/></svg></div>
+              <h3 class="text-xl font-semibold text-brand mb-3">Distribution</h3>
+              <p class="text-gray-600">Worldwide availability on Amazon, Barnes & Noble, Apple Books, and more.</p>
+            </div>
+            <div class="bg-white rounded-2xl p-8 shadow-lg card-hover">
+              <div class="w-14 h-14 rounded-xl bg-brand/10 flex items-center justify-center mb-6"><svg class="w-7 h-7 text-brand" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/></svg></div>
+              <h3 class="text-xl font-semibold text-brand mb-3">ISBN & Metadata</h3>
+              <p class="text-gray-600">ISBN registration and optimized metadata for discoverability.</p>
+            </div>
+            <div class="bg-white rounded-2xl p-8 shadow-lg card-hover">
+              <div class="w-14 h-14 rounded-xl bg-brand/10 flex items-center justify-center mb-6"><svg class="w-7 h-7 text-brand" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg></div>
+              <h3 class="text-xl font-semibold text-brand mb-3">Launch Planning</h3>
+              <p class="text-gray-600">Strategic release timing and pre-order coordination.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="py-20 bg-brand">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="text-center mb-16">
+            <h2 class="text-3xl sm:text-4xl font-display font-bold text-white mb-4">Publishing Packages</h2>
+          </div>
+          <div class="grid md:grid-cols-3 gap-8">
+            <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
+              <h3 class="text-xl font-semibold text-white mb-2">Essential</h3>
+              <p class="text-white/70 text-sm mb-6">Basic publishing support</p>
+              <ul class="space-y-3 mb-8 text-white/80 text-sm">
+                <li>✓ Proofreading</li>
+                <li>✓ Basic Formatting</li>
+                <li>✓ ISBN Assignment</li>
+                <li>✓ Distribution Setup</li>
+              </ul>
+              <a href="#" onclick="showPage('contact')" class="block w-full text-center px-6 py-3 border-2 border-gold text-gold hover:bg-gold hover:text-brand font-semibold rounded-lg transition-all">Get Quote</a>
+            </div>
+            <div class="bg-white rounded-2xl p-8 shadow-2xl relative transform scale-105">
+              <div class="absolute top-0 right-0 bg-gold text-brand text-xs font-bold px-3 py-1 rounded-bl-lg rounded-tr-lg">POPULAR</div>
+              <h3 class="text-xl font-semibold text-brand mb-2">Professional</h3>
+              <p class="text-gray-600 text-sm mb-6">Complete publishing for serious authors</p>
+              <ul class="space-y-3 mb-8 text-gray-700 text-sm">
+                <li>✓ Line Editing</li>
+                <li>✓ Custom Cover Design</li>
+                <li>✓ Print + eBook Formatting</li>
+                <li>✓ ISBN + Copyright</li>
+                <li>✓ Global Distribution</li>
+              </ul>
+              <a href="#" onclick="showPage('contact')" class="block w-full text-center px-6 py-3 bg-brand hover:bg-brand-dark text-white font-semibold rounded-lg transition-all">Get Quote</a>
+            </div>
+            <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
+              <h3 class="text-xl font-semibold text-white mb-2">Premium</h3>
+              <p class="text-white/70 text-sm mb-6">Full-service with promotion</p>
+              <ul class="space-y-3 mb-8 text-white/80 text-sm">
+                <li>✓ Developmental Editing</li>
+                <li>✓ Premium Cover Design</li>
+                <li>✓ All Professional Features</li>
+                <li>✓ BookTok Promotion</li>
+                <li>✓ Launch Coordination</li>
+              </ul>
+              <a href="#" onclick="showPage('contact')" class="block w-full text-center px-6 py-3 border-2 border-gold text-gold hover:bg-gold hover:text-brand font-semibold rounded-lg transition-all">Get Quote</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="py-20 bg-gradient-to-b from-brand to-brand-dark">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 class="text-3xl sm:text-4xl font-display font-bold text-white mb-6">Ready to Publish Your Book?</h2>
+          <a href="#" onclick="showPage('contact')" class="inline-flex items-center justify-center px-8 py-4 bg-gold hover:bg-gold-light text-brand font-semibold text-lg rounded-full shadow-xl transition-all hover:scale-105">Start Publishing <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg></a>
+        </div>
+      </section>
+    </div>
+
+    <!-- ABOUT PAGE -->
+    <div id="page-about" class="page">
+      <section class="relative py-32 bg-gradient-to-br from-brand via-brand-light to-brand overflow-hidden">
+        <div class="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-display font-bold text-white mb-6">About <span class="text-gold-gradient">Green Marbles</span></h1>
+          <p class="text-xl sm:text-2xl text-white/90 max-w-3xl mx-auto">Your trusted partner for BookTok promotion and professional book publishing</p>
+        </div>
+      </section>
+
+      <section class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="grid lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <h2 class="text-3xl sm:text-4xl font-display font-bold text-brand mb-6">Our Story</h2>
+              <div class="space-y-4 text-gray-600 leading-relaxed">
+                <p>Green Marbles was born from a simple belief: every book deserves to find its readers. What started as helping author friends navigate the BookTok landscape evolved into a comprehensive service.</p>
+                <p>As we grew, we recognized that authors needed more than just promotion - they needed a partner who could guide them through every step of the publishing journey.</p>
+                <p>Today, we offer a complete solution for authors: professional publishing services combined with strategic promotion that connects books with readers who will love them.</p>
+              </div>
+            </div>
+            <div class="bg-gradient-to-br from-brand/10 to-gold/20 rounded-3xl p-8">
+              <img src="https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=500&h=400&fit=crop" alt="Our Story" class="rounded-2xl shadow-xl w-full">
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="py-20 bg-gray-50">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <div class="w-16 h-16 rounded-full bg-gold flex items-center justify-center mx-auto mb-6">
+            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/></svg>
+          </div>
+          <h2 class="text-3xl sm:text-4xl font-display font-bold text-brand mb-6">Our Mission</h2>
+          <p class="text-xl text-gray-600 leading-relaxed">To empower authors with comprehensive publishing support and strategic promotion that connects their stories with readers who will love them. Every book deserves to find its audience.</p>
+        </div>
+      </section>
+
+      <section class="py-20 bg-gradient-to-b from-brand to-brand-dark">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 class="text-3xl sm:text-4xl font-display font-bold text-white mb-6">Ready to Start Your Journey?</h2>
+          <a href="#" onclick="showPage('contact')" class="inline-flex items-center justify-center px-8 py-4 bg-gold hover:bg-gold-light text-brand font-semibold text-lg rounded-full shadow-xl transition-all hover:scale-105">Get Started Today <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg></a>
+        </div>
+      </section>
+    </div>
+
+    <!-- PORTFOLIO PAGE -->
+    <div id="page-portfolio" class="page">
+      <section class="relative py-32 bg-gradient-to-br from-brand via-brand-light to-brand overflow-hidden">
+        <div class="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-display font-bold text-white mb-6">Our <span class="text-gold-gradient">Portfolio</span></h1>
+          <p class="text-xl sm:text-2xl text-white/90 max-w-3xl mx-auto">Success stories from authors who trusted us with their books</p>
+        </div>
+      </section>
+
+      <section class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="text-center mb-16">
+            <h2 class="text-3xl sm:text-4xl font-display font-bold text-brand mb-4">Featured Success Stories</h2>
+          </div>
+          <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="bg-white rounded-2xl shadow-lg overflow-hidden card-hover">
+              <div class="h-48 bg-gradient-to-br from-brand to-brand-light flex items-center justify-center">
+                <svg class="w-20 h-20 text-white/30" fill="currentColor" viewBox="0 0 24 24"><path d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
+              </div>
+              <div class="p-6">
+                <span class="text-xs bg-gold/20 text-gold px-2 py-1 rounded-full font-medium">Romance</span>
+                <h3 class="text-lg font-semibold text-brand mt-3 mb-2">Debut Romance Novel</h3>
+                <p class="text-gray-600 text-sm mb-4">"My book went from 5 reviews to 500+ in three months. The BookTok strategy was exactly what I needed."</p>
+                <div class="flex items-center gap-2 text-brand font-semibold"><span>340% Sales Increase</span></div>
+              </div>
+            </div>
+            <div class="bg-white rounded-2xl shadow-lg overflow-hidden card-hover">
+              <div class="h-48 bg-gradient-to-br from-brand to-brand-light flex items-center justify-center">
+                <svg class="w-20 h-20 text-white/30" fill="currentColor" viewBox="0 0 24 24"><path d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
+              </div>
+              <div class="p-6">
+                <span class="text-xs bg-gold/20 text-gold px-2 py-1 rounded-full font-medium">Fantasy</span>
+                <h3 class="text-lg font-semibold text-brand mt-3 mb-2">Epic Fantasy Series</h3>
+                <p class="text-gray-600 text-sm mb-4">"Green Marbles helped me launch my entire series. The promotion kept building momentum across all three books."</p>
+                <div class="flex items-center gap-2 text-brand font-semibold"><span>3-Book Series Launch</span></div>
+              </div>
+            </div>
+            <div class="bg-white rounded-2xl shadow-lg overflow-hidden card-hover">
+              <div class="h-48 bg-gradient-to-br from-brand to-brand-light flex items-center justify-center">
+                <svg class="w-20 h-20 text-white/30" fill="currentColor" viewBox="0 0 24 24"><path d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
+              </div>
+              <div class="p-6">
+                <span class="text-xs bg-gold/20 text-gold px-2 py-1 rounded-full font-medium">Thriller</span>
+                <h3 class="text-lg font-semibold text-brand mt-3 mb-2">Psychological Thriller</h3>
+                <p class="text-gray-600 text-sm mb-4">"From complete unknown to BookTok trending. The targeted reader discovery approach really works."</p>
+                <div class="flex items-center gap-2 text-brand font-semibold"><span>Trending on BookTok</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="py-20 bg-gradient-to-b from-brand to-brand-dark">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 class="text-3xl sm:text-4xl font-display font-bold text-white mb-6">Ready to Be Our Next Success Story?</h2>
+          <a href="#" onclick="showPage('contact')" class="inline-flex items-center justify-center px-8 py-4 bg-gold hover:bg-gold-light text-brand font-semibold text-lg rounded-full shadow-xl transition-all hover:scale-105">Start Your Journey <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg></a>
+        </div>
+      </section>
+    </div>
+
+    <!-- CONTACT PAGE -->
+    <div id="page-contact" class="page">
+      <section class="relative py-32 bg-gradient-to-br from-brand via-brand-light to-brand overflow-hidden">
+        <div class="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-display font-bold text-white mb-6">Get In <span class="text-gold-gradient">Touch</span></h1>
+          <p class="text-xl sm:text-2xl text-white/90 max-w-3xl mx-auto">Ready to start your journey? Let's discuss how we can help your book find its readers.</p>
+        </div>
+      </section>
+
+      <section class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="grid lg:grid-cols-2 gap-12">
+            <div>
+              <h2 class="text-2xl font-display font-bold text-brand mb-6">Send Us a Message</h2>
+              <form action="https://formsubmit.co/greenmarblesauthorspr@gmail.com" method="POST" class="space-y-6">
+                <input type="hidden" name="_subject" value="New inquiry from Green Marbles website">
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_template" value="table">
                 
-                <!-- The Form -->
-                <div id="lead-form-wrapper">
-                    <div class="text-center" style="margin-bottom: 30px;">
-                        <h2>Claim Your Strategic Growth Plan</h2>
-                        <p style="color: var(--text-grey);">Tell us about your book. We'll tell you how to launch it.</p>
-                    </div>
-
-                    <form id="contactForm">
-                        <div class="form-group">
-                            <label for="name">Full Name</label>
-                            <input type="text" id="name" class="form-control" placeholder="Jane Doe" required>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="email">Email Address</label>
-                            <input type="email" id="email" class="form-control" placeholder="jane@author.com" required>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="genre">Book Genre</label>
-                            <select id="genre" class="form-control">
-                                <option value="" disabled selected>Select your genre...</option>
-                                <option value="romance">Romance</option>
-                                <option value="fantasy">Fantasy</option>
-                                <option value="mystery">Mystery/Thriller</option>
-                                <option value="scifi">Sci-Fi</option>
-                                <option value="nonfiction">Non-Fiction</option>
-                                <option value="other">Other</option>
-                            </select>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="message">About Your Book (Optional)</label>
-                            <textarea id="message" rows="4" class="form-control" placeholder="Briefly describe your current goals..."></textarea>
-                        </div>
-
-                        <button type="submit" class="btn btn-full">Request Consultation</button>
-                        <p style="font-size: 0.75rem; color: #999; text-align: center; margin-top: 10px;">
-                            Clicking this will open your email client to send the request securely.
-                        </p>
-                    </form>
+                <div class="grid md:grid-cols-2 gap-6">
+                  <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-2">Your Name</label>
+                    <input type="text" name="name" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand focus:border-brand outline-none transition-all" placeholder="John Doe">
+                  </div>
+                  <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-2">Email Address</label>
+                    <input type="email" name="email" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand focus:border-brand outline-none transition-all" placeholder="john@example.com">
+                  </div>
                 </div>
-
-                <!-- Success Message (Hidden Initially) -->
-                <div id="form-success">
-                    <div style="font-size: 3rem; color: var(--accent-gold); margin-bottom: 20px;">✓</div>
-                    <h3>Email Client Opened</h3>
-                    <p style="color: var(--text-grey);">If your email app opened, please click "Send" in that window to complete your request.</p>
-                    <br>
-                    <button onclick="resetForm()" class="btn btn-outline" style="color: var(--primary-green); border-color: var(--primary-green);">Send Another</button>
+                
+                <div>
+                  <label class="block text-sm font-medium text-gray-700 mb-2">Service Interested In</label>
+                  <select name="service" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand focus:border-brand outline-none transition-all">
+                    <option value="">Select a service...</option>
+                    <option value="BookTok Promotion">BookTok Promotion</option>
+                    <option value="Publishing Services">Publishing Services</option>
+                    <option value="Both Promotion & Publishing">Both Promotion & Publishing</option>
+                    <option value="Other">Other</option>
+                  </select>
                 </div>
-
+                
+                <div>
+                  <label class="block text-sm font-medium text-gray-700 mb-2">Book Title (if applicable)</label>
+                  <input type="text" name="book_title" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand focus:border-brand outline-none transition-all" placeholder="Your book's title">
+                </div>
+                
+                <div>
+                  <label class="block text-sm font-medium text-gray-700 mb-2">Your Message</label>
+                  <textarea name="message" rows="5" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand focus:border-brand outline-none transition-all resize-none" placeholder="Tell us about your book and what you're looking for..."></textarea>
+                </div>
+                
+                <button type="submit" class="w-full px-8 py-4 bg-gold hover:bg-gold-light text-brand font-semibold text-lg rounded-lg transition-all hover:shadow-lg">Send Message</button>
+              </form>
             </div>
+            
+            <div>
+              <h2 class="text-2xl font-display font-bold text-brand mb-6">Contact Information</h2>
+              <div class="bg-gray-50 rounded-2xl p-8 space-y-6">
+                <div class="flex items-start gap-4">
+                  <div class="w-12 h-12 rounded-lg bg-brand/10 flex items-center justify-center flex-shrink-0">
+                    <svg class="w-6 h-6 text-brand" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                  </div>
+                  <div>
+                    <div class="font-semibold text-brand">Email</div>
+                    <a href="mailto:greenmarblesauthorspr@gmail.com" class="text-gray-600 hover:text-brand transition-colors">greenmarblesauthorspr@gmail.com</a>
+                  </div>
+                </div>
+                <div class="flex items-start gap-4">
+                  <div class="w-12 h-12 rounded-lg bg-brand/10 flex items-center justify-center flex-shrink-0">
+                    <svg class="w-6 h-6 text-brand" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                  </div>
+                  <div>
+                    <div class="font-semibold text-brand">Response Time</div>
+                    <div class="text-gray-600">Within 24-48 hours</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-    </section>
+      </section>
+    </div>
 
     <!-- FOOTER -->
-    <footer>
-        <div class="container footer-content">
-            <div class="footer-logo">greenmarblesprsolutions</div>
-            <p class="footer-tagline">Cultivating Your Story. Scaling Your Success.</p>
-            
-            <div class="contact-info">
-                <!-- Direct Mailto Link -->
-                <a href="mailto:greenmarblesauthorspr@gmail.com">greenmarblesauthorspr@gmail.com</a>
+    <footer class="bg-brand-dark text-white py-16">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid md:grid-cols-4 gap-8 mb-12">
+          <div class="md:col-span-2">
+            <div class="flex items-center gap-3 mb-4">
+              <img src="logo.png" alt="Green Marbles Logo" class="h-12 w-auto" onerror="this.style.display='none'">
+              <div>
+                <div class="font-display font-bold text-xl">Green Marbles</div>
+                <div class="text-gold text-sm tracking-widest uppercase">PR & Publishing</div>
+              </div>
             </div>
-
-            <div class="copyright">
-                &copy; 2023 Green Marbles PR Solutions. All Rights Reserved. <br>
-                Designed for Authors Who Demand Excellence.
-            </div>
+            <p class="text-white/70 max-w-md">Your trusted partner for BookTok promotion and professional publishing services. Where stories find their readers.</p>
+          </div>
+          <div>
+            <h4 class="font-semibold mb-4">Services</h4>
+            <ul class="space-y-2 text-white/70">
+              <li><a href="#" onclick="showPage('promotion')" class="hover:text-gold transition-colors">BookTok Promotion</a></li>
+              <li><a href="#" onclick="showPage('publishing')" class="hover:text-gold transition-colors">Publishing Services</a></li>
+              <li><a href="#" onclick="showPage('contact')" class="hover:text-gold transition-colors">Consultation</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="font-semibold mb-4">Company</h4>
+            <ul class="space-y-2 text-white/70">
+              <li><a href="#" onclick="showPage('about')" class="hover:text-gold transition-colors">About Us</a></li>
+              <li><a href="#" onclick="showPage('portfolio')" class="hover:text-gold transition-colors">Portfolio</a></li>
+              <li><a href="#" onclick="showPage('contact')" class="hover:text-gold transition-colors">Contact</a></li>
+            </ul>
+          </div>
         </div>
+        <div class="border-t border-white/10 pt-8 text-center text-white/50 text-sm">
+          <p>&copy; 2025 Green Marbles PR & Publishing. All rights reserved.</p>
+          <p class="mt-2 italic">"Where Stories Find Their Readers"</p>
+        </div>
+      </div>
     </footer>
 
-    <!-- JavaScript -->
-    <script>
-        // 1. SCROLL ANIMATIONS
-        document.addEventListener("DOMContentLoaded", function() {
-            const observerOptions = {
-                root: null,
-                rootMargin: '0px',
-                threshold: 0.1
-            };
+  </div>
 
-            const observer = new IntersectionObserver((entries, observer) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('visible');
-                        observer.unobserve(entry.target);
-                    }
-                });
-            }, observerOptions);
-
-            const fadeElements = document.querySelectorAll('.fade-in-up');
-            fadeElements.forEach(el => observer.observe(el));
-        });
-
-        // 2. FORM HANDLING (MAILTO WORKAROUND)
-        // This function grabs data, creates a mailto link, and opens the user's email app
-        document.getElementById('contactForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-
-            // Get values
-            const name = document.getElementById('name').value;
-            const email = document.getElementById('email').value;
-            const genre = document.getElementById('genre').value;
-            const message = document.getElementById('message').value;
-
-            // Construct the email body
-            const bodyText = `Name: ${name}%0D%0AEmail: ${email}%0D%0AGenre: ${genre}%0D%0AMessage: ${message}`;
-            const subject = encodeURIComponent("New Author Inquiry from Website");
-
-            // Create mailto link
-            const mailtoLink = `mailto:greenmarblesauthorspr@gmail.com?subject=${subject}&body=${bodyText}`;
-
-            // Open the link (This triggers the email app)
-            window.location.href = mailtoLink;
-
-            // Show success UI
-            document.getElementById('lead-form-wrapper').style.display = 'none';
-            document.getElementById('form-success').style.display = 'block';
-        });
-
-        function resetForm() {
-            const formWrapper = document.getElementById('lead-form-wrapper');
-            const successMessage = document.getElementById('form-success');
-            const form = document.getElementById('contactForm');
-
-            form.reset();
-            successMessage.style.display = 'none';
-            formWrapper.style.display = 'block';
-            formWrapper.classList.add('fade-in-up', 'visible');
-        }
-    </script>
+  <!-- JAVASCRIPT -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const particlesContainer = document.getElementById('particles');
+      for (let i = 0; i < 20; i++) {
+        const particle = document.createElement('div');
+        particle.className = 'particle';
+        particle.style.left = Math.random() * 100 + '%';
+        particle.style.animationDelay = Math.random() * 4 + 's';
+        particle.style.animationDuration = (3 + Math.random() * 3) + 's';
+        particlesContainer.appendChild(particle);
+      }
+      
+      setTimeout(function() {
+        const loadingScreen = document.getElementById('loading-screen');
+        const mainContent = document.getElementById('main-content');
+        loadingScreen.classList.add('fade-out');
+        mainContent.style.opacity = '1';
+      }, 2500);
+    });
+    
+    function showPage(pageId) {
+      document.querySelectorAll('.page').forEach(page => { page.classList.remove('active'); });
+      const targetPage = document.getElementById('page-' + pageId);
+      if (targetPage) {
+        targetPage.classList.add('active');
+        window.scrollTo(0, 0);
+      }
+      document.querySelectorAll('.nav-link').forEach(link => {
+        link.classList.remove('text-brand', 'bg-brand/10');
+        link.classList.add('text-gray-600', 'hover:text-brand', 'hover:bg-gray-100');
+      });
+      const activeLink = document.querySelector('.nav-link[data-page="' + pageId + '"]');
+      if (activeLink) {
+        activeLink.classList.remove('text-gray-600', 'hover:text-brand', 'hover:bg-gray-100');
+        activeLink.classList.add('text-brand', 'bg-brand/10');
+      }
+      return false;
+    }
+    
+    function toggleMobileMenu() {
+      const mobileMenu = document.getElementById('mobile-menu');
+      const menuIcon = document.getElementById('menu-icon');
+      const closeIcon = document.getElementById('close-icon');
+      mobileMenu.classList.toggle('hidden');
+      menuIcon.classList.toggle('hidden');
+      closeIcon.classList.toggle('hidden');
+    }
+    
+    document.addEventListener('DOMContentLoaded', function() {
+      const homeLink = document.querySelector('.nav-link[data-page="home"]');
+      if (homeLink) {
+        homeLink.classList.remove('text-gray-600', 'hover:text-brand', 'hover:bg-gray-100');
+        homeLink.classList.add('text-brand', 'bg-brand/10');
+      }
+    });
+  </script>
 </body>
 </html>
